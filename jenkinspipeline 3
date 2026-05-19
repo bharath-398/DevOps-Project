@@ -2,15 +2,15 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = 'emc-nodejs-app:latest'
+    IMAGE_NAME = 'index.js-app:latest'
     DOCKERHUB_CREDENTIALS = 'dockerhub-token'
-    DOCKERHUB_REPO = 'venkiemc/emc-nodejs-app'
+    DOCKERHUB_REPO = 'bharath398/newrepo'
   }
 
   stages {
     stage('Code Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/Venkiemc/emc-nodejs-app.git'
+        git branch: 'main', url: 'https://github.com/bharath-398/DevOps-Project.git'
       }
     }
 
