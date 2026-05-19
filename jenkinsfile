@@ -2,13 +2,13 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = 'emc-nodejs-app:latest'
+    IMAGE_NAME = 'index.js-app:latest'
   }
 
   stages {
     stage('Checkout Code') {
       steps {
-        git branch: 'main', url: 'https://github.com/Venkiemc/emc-nodejs-app.git'
+        git branch: 'main', url: 'https://github.com/bharath-398/DevOps-Project.git'
       }
     }
     stage('Build Docker Image') {
