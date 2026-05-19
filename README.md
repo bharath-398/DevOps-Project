@@ -85,7 +85,7 @@ A DevOps project built with **Node.js**, **Docker**, and **Jenkins**. The projec
 1. **Checkout Code**
    - Clones the GitHub repository
    - Branch: `main`
-   - Repository: emc-nodejs-app
+   - Repository: index.js-app
 
 2. **Build Docker Image**
    - Executes: `docker build -t emc-nodejs-app:latest .`
@@ -98,7 +98,7 @@ A DevOps project built with **Node.js**, **Docker**, and **Jenkins**. The projec
 
 #### Environment Variables:
 ```
-IMAGE_NAME = 'emc-nodejs-app:latest'
+IMAGE_NAME = 'index.js-app:latest'
 ```
 
 #### Key Characteristics:
@@ -140,14 +140,14 @@ IMAGE_NAME = 'emc-nodejs-app:latest'
 
 4. **Docker Login and Push** ⭐ NEW
    - Logs into Docker Hub using credentials
-   - Tags image: `venkiemc/emcnewrepo:latest1`
+   - Tags image: `bharath398/newrepo:latest1`
    - Pushes image to DockerHub repository
 
 #### Environment Variables:
 ```
-IMAGE_NAME = 'emc-nodejs-app:latest'
+IMAGE_NAME = 'indexjs-app:latest'
 DOCKERHUB_CREDENTIALS = 'dockerhub-token'  // Jenkins credential ID
-DOCKERHUB_REPO = 'venkiemc/emcnewrepo'
+DOCKERHUB_REPO = 'bharath398/newrepo'
 ```
 
 #### Key Differences from jenkinsfile:
@@ -185,7 +185,7 @@ DOCKERHUB_REPO = 'venkiemc/emcnewrepo'
 
 3. **Docker Login and Push** ⭐ OPTIMIZED
    - Logs into Docker Hub
-   - Tags image: `venkiemc/emc-nodejs-app:latest` (cleaner naming)
+   - Tags image: `index.js-app:latest` (cleaner naming)
    - Pushes to DockerHub
 
 4. **Pull Docker Image** ⭐ NEW
@@ -195,7 +195,7 @@ DOCKERHUB_REPO = 'venkiemc/emcnewrepo'
 5. **Deploy Docker Container** ⭐ NEW
    - Runs container in detached mode
    - Maps port 80 (host) → 3000 (container)
-   - Container name: `emc-node-container`
+   - Container name: `-node-container`
    - Fully deployed and accessible on port 80
 
 #### Environment Variables:
